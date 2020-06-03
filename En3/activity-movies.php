@@ -1,6 +1,6 @@
 <?php
 
-$realisateurs = [
+$actors = [
     'Martin Scorsese'=> ['Taxi Driver, palme or','La Derniere Valse','Raging Bull',' Les Affranchis','Living in the Material World'],
     'Steven Spielberg'=> ['Les Aventures de Tintin','Les Aventures de Tintin2','Les Aventures de Tintin3','Les Aventures de Tintin4','Les Aventures de Tintin5'],
     'Paul Verhoeven'=> ['Taxi Driver1','Taxi Driver2','Taxi Driver3','Taxi Driver4','Taxi Driver5'],
@@ -11,14 +11,14 @@ $realisateurs = [
 
 function showDetails (int $r=5, int $t=5){
 
-    global $realisateurs;                 
-    $nbrR = array_rand($realisateurs, $r); 
+    global $actors;                 
+    $nbrR = array_rand($actors, $r); 
     $nbrT = array_rand($nbrR, $t);        
         foreach($nbrR as $cle => $i){
         echo "<b>les films de $i :</b> <br><br>";
     
         foreach ($nbrT as $y){
-        echo $realisateurs[$i][$y] .'<br>';
+        echo $actors[$i][$y] .'<br>';
         }
     
         echo '<br>';
